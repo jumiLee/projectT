@@ -13,8 +13,8 @@ try{
 	System.out.println("JDBC 드라이버 연결 오류 : " + e);
 	e.printStackTrace();
 }  
-String DB_url = "jdbc:mysql://edeninstance1.cxjnscx5pygz.ap-northeast-2.rds.amazonaws.com:3306/nb";	//Amazon Global Live (MYSQL / 노블리스)	
-String DB_url_replica = "jdbc:mysql://edeninstance1.cxjnscx5pygz.ap-northeast-2.rds.amazonaws.com:3306/nb";	//Amazon Live Replica (MYSQL / 노블리스)
+String DB_url = "jdbc:mysql://edeninstance1.cqka8xbywsmf.ap-northeast-2.rds.amazonaws.com:33062/nb";	//Amazon Global Live (MYSQL / 노블리스)	
+String DB_url_replica = "jdbc:mysql://edeninstance1.cqka8xbywsmf.ap-northeast-2.rds.amazonaws.com:33062/nb";	//Amazon Live Replica (MYSQL / 노블리스)
 
 
 //String DB_url = "jdbc:mysql://192.168.1.24:3306/NB";	//LOCAL QA (MYSQL / 노블리스)
