@@ -1,0 +1,197 @@
+@charset "utf-8";
+.footerA {
+	font-weight: bold;
+	color:orange;
+	text-decoration: none;
+}
+body {
+	background-color:#000000;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+body,td,th {
+	color: #FFF;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: "malgun gothic", "돋움체", Arial;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+hr.style-one {
+    height: 12px;
+    width : 80%;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+
+.term_textarea {	
+ 	font-family: "malgun gothic", "돋움체", Arial;
+ 	font-size: 12px;
+ 	border: 1px solid #d7d7d7;
+ 	color: #666666;
+ 	overflow-y:scroll;
+ 	height:100px;
+ 	text-align:left;
+}
+
+table {border-collapse:collapse; border-spacing:0;}
+
+.ui-page {background-color: #000000}
+.my-page{background-color: #000000}
+#Button {
+	font-weight: bolder;
+}
+#custom_ft ul {
+	display: inline;
+}
+#custom_ft ul li {
+	display: inline;
+}
+
+
+        html, body
+        {
+            margin:0;
+        }
+        #header
+        {
+        	z-index:2;
+        	height:30px;
+            top:0;            
+            width:100%;
+            font-weight:bold;
+        }
+        header
+        {
+            position:absolute;
+            z-index:2;
+            height:50px;
+            top:0;            
+            width:100%;
+            font-weight:bold;
+            text-align:center;
+        }
+        /* #content
+        {
+        	position:absolute;
+        	z-index:1;
+        	top:45px; bottom:48px;
+        	left:0;
+        	width:100%;
+        	overflow:auto;
+        } */
+        /* #something
+        {
+            position:absolute;
+            top:40px;
+            height:60px;
+            width:100%;
+        }*/
+        #iscroll
+        {
+        	position:absolute;
+        	z-index:1;
+        	top:55px; bottom:55.5px;
+        	left:0;
+        	width:100%;
+        	overflow:auto;
+        	
+        	
+           	/* width:100%;
+            position:absolute;
+            bottom:-30px;
+            left:0;
+            top:30px; header + something
+            z-index:1;
+            overflow:auto; */
+        }
+        #scroller {
+	        position:absolute;
+	        z-index:1;
+            /* -webkit-touch-callout:none; */
+	        -webkit-tap-highlight-color:rgba(0,0,0,0);
+	        -webkit-overflow-scrolling: touch; 
+	        width:100%;
+	        padding:0;
+        }
+        
+      /*  #scroller ul {
+	        list-style:none;
+	        padding:0;
+	        margin:0;
+	        width:100%;
+	        text-align:left;
+        }
+        #scroller li {
+	        padding:0 10px;
+	        height:30px;
+	        line-height:30px;
+	        border-bottom:1px solid #ccc;
+	        border-top:1px solid #fff;	        
+        } */
+        
+        footer
+        {
+            position:absolute;
+            z-index:2;
+            height:40px;
+            bottom:-60px;
+            font-weight:bold;
+            text-align:center;
+            width:100%;
+        }
+        #footer
+        {
+        	z-index:2;
+        	height:45.5px;
+            font-weight:bold;
+            text-align:center;
+            width:100%;
+        }
+
+
+/* select Box 설정 */
+
+span.customStyleSelectBox{
+ font-size:14px;
+ background-color:#ffffff;
+ color:white;
+ padding:0 0 0 7px;
+ border:0px solid #C0C4CB;
+ background:url(../images/Missions/UI_SelectBar_01N.jpg) no-repeat center right;
+ background-size:100% 100%;
+ padding:5px 7px;
+}
+span.customStyleSelectBox.changed{
+ background-color: #ffffff;
+}
+.customStyleSelectBoxInner{
+ font-size:14px;
+ letter-spacing:-1px;
+ white-space:nowrap;
+}
+.customStyleSelectBorderStrong{
+ border-color:#000000;
+}
+
+/* theme bar,body,btn containers
+----------------------------------*/
+/* .ui-bar-black {  border: 1px solid #2A2A2A; background: #111111; color: #fff; font-weight: bold; text-shadow: 0 -1px 1px #000; background-image: -moz-linear-gradient(top, #3c3c3c, #111111); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #3c3c3c),color-stop(1, #111111));   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3c3c3c', EndColorStr='#111111')"; }
+.ui-bar-black, .ui-bar-black input, .ui-bar-black select, .ui-bar-black textarea, .ui-bar-black button { font-family: Helvetica, Arial, sans-serif; }
+.ui-bar-black .ui-link-inherit { color: #fff; }
+.ui-bar-black .ui-link { color: #7cc4e7; font-weight: bold; }
+
+.ui-body-black {  border: 1px solid #2A2A2A; background: black; color: #fff;  text-shadow: 0 1px 0 #000; font-weight: normal; background-image: -moz-linear-gradient(top, #666666, #222222); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #666666),color-stop(1, #222222)); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#222222)')"; }
+.ui-body-black, .ui-body-black input, .ui-body-black select, .ui-body-black textarea, .ui-body-black button { font-family: Helvetica, Arial, sans-serif; }
+.ui-body-black .ui-link-inherit { color: #fff; }
+.ui-body-black .ui-link { color: #2489CE; font-weight: bold; }
+.ui-br { border-bottom: 1px solid rgba(130,130,130,.3); }
+
+.ui-btn-up-black { border: 1px solid #222; background: #333333; font-weight: bold; color: #fff; cursor: pointer;  text-shadow: 0 -1px 1px #000; text-decoration: none; background-image: -moz-linear-gradient(top, #555555, #333333); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #555555),color-stop(1, #333333));   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#555555', EndColorStr='#333333')"; }
+.ui-btn-up-black a.ui-link-inherit { color: #fff; }
+.ui-btn-hover-black { border: 1px solid #000; background: #444444; font-weight: bold; color: #fff;  text-shadow: 0 -1px 1px #000; text-decoration: none; background-image: -moz-linear-gradient(top, #666666, #444444); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #666666),color-stop(1, #444444));   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#444444')";   }
+.ui-btn-hover-black a.ui-link-inherit { color: #fff; }
+.ui-btn-down-black { border: 1px solid #000; background: #3d3d3d; font-weight: bold; color: #fff; text-shadow: 0 -1px 1px #000; background-image: -moz-linear-gradient(top, #333333, #5a5a5a); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #333333),color-stop(1, #5a5a5a));   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#5a5a5a')"; }
+.ui-btn-down-black a.ui-link-inherit { color: #fff; }
+.ui-btn-up-black, .ui-btn-hover-black, .ui-btn-down-black { font-family: Helvetica, Arial, sans-serif; } */
