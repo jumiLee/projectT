@@ -1,15 +1,19 @@
-<%@page import="java.util.ArrayList"%>
+
 <%@page import="net.sf.json.JSONArray"%>
+<%@page import="net.sf.json.JSONObject"%>
+<%@page import="org.apache.commons.collections.map.HashedMap"%>
+
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="javax.naming.InitialContext"%>
 <%@page import="javax.sql.DataSource"%>
 <%@page import="javax.naming.Context"%>
-<%@page import="net.sf.json.JSONObject"%>
+
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.Map"%>
-<%@page import="org.apache.commons.collections.map.HashedMap"%>
+
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -25,13 +29,16 @@ String m_no = request.getParameter("m_no");
 int result = 0;
 int user_account = 0;
 try{   
+	
 	 
 	Conn = DriverManager.getConnection(DB_url, DB_user, DB_pwd);
+	
+	System.out.println ("m_no:" + m_no);
 	
 	sql.append(" Call abn_getUserInfoByAccountNo  (" + m_no + " )\n") ;
 	//System.out.println (sql.toString());
 	System.out.println ("Remote Addr: " + request.getRemoteAddr()  +" / " + "Remote Host: " + request.getRemoteHost() + " / " + "X-Forward-For : " + request.getHeader("x-forwarded-for"));
-	System.out.println ("m_no:" + m_no);
+	
 	
 	pstmt = Conn.prepareStatement(sql.toString());	
 	rs = pstmt.executeQuery();  
