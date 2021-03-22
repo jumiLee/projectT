@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="./moe_common.jsp"%>
+<%@ include file="./common.jsp"%>
 <%
-String P_type 	="T74";
+String P_type 	="T016";
 String draw_id 	= request.getParameter("draw_id");	//draw_id
 int draw_type_cd = -1;
 int result_cd = 0; int draw_rwd_type = 0; int draw_rwd_id = 0; String draw_rwd_nm = ""; int rare_degree = 0;int rwd_img_no=0;
@@ -10,13 +10,11 @@ try{
 	
 	Conn = DriverManager.getConnection(DB_url, DB_user, DB_pwd);
 	
-	//sql.append(" EXEC [dbo].[abn_MgmtUserDraw] "+ user_account + ", " + draw_id + ","+ draw_id + "\n");
-	sql.append(" Call abn_MgmtUserDraw  ("+ user_account + "," + draw_id + "," + draw_type_cd + " )\n") ;
-//System.out.println ("draw:" + sql.toString());
+	sql.append(" Call pt_MgmtUserDraw  ("+ user_account + "," + draw_id + "," + draw_type_cd + " )\n") ;
 	
 	pstmt = Conn.prepareStatement(sql.toString());
 	rs = pstmt.executeQuery();
-	
+	System.out.println (sql.toString());
 	if(rs.next()){
 		result_cd		= rs.getInt("result");	
 		draw_rwd_type 	= rs.getInt("draw_rwd_type");
@@ -35,5 +33,4 @@ try{
 	if(rs != null) rs.close();
 }	
 %> 
-<%@ include file="./moe_header.jsp"%>
 <%=P_type %>|<%=result_cd%>|<%=draw_rwd_type%>|<%=draw_rwd_id %>|<%=draw_rwd_nm%>|<%=rare_degree%>|<%=rwd_img_no%>|

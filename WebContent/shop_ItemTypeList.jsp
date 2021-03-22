@@ -1,17 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./moe_common.jsp"%>
-<%@ include file="./moe_header.jsp"%>
 <%
 
 int unit_cd = 0;
-String P_type = "";
+String P_type = "T015";
 String draw_type_cd = request.getParameter("draw_type_cd");
-
-if (draw_type_cd.equals("4")){
-	P_type = "T585";
-}else if (draw_type_cd.equals("5")){
-	P_type = "T586";
-}
 
 String result_packet = "" ; //Result Packet
 int tot_cnt 	= 0;
@@ -31,7 +24,7 @@ try{
 	 
 	Conn = DriverManager.getConnection(DB_url, DB_user, DB_pwd);
 	
-	sql.append(" Call abn_getDrawList  (2," + draw_type_cd + " )\n") ;
+	sql.append(" Call pt_getDrawList  (2," + draw_type_cd + " )\n") ;
 	
 	pstmt = Conn.prepareStatement(sql.toString());
 	

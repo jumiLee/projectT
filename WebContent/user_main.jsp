@@ -23,9 +23,6 @@ try{
 	sql.append(" Call abn_DeleteBossBattle (2," + user_account + ") \n");
 	pstmt = Conn.prepareStatement(sql.toString());
 	rs = pstmt.executeQuery();
-//System.out.println ("돌발보스체크");
-
-
 
 //업적처리
 	int achv_result =0;
@@ -50,7 +47,7 @@ try{
 	cs.registerOutParameter(7, java.sql.Types.INTEGER);	 //achv_result_cd
 	cs.execute();
 	achv_result = cs.getInt(7);
-	
+
 	/*
 	int achv_id=0;
 	for (achv_id =1; achv_id < 4 ; achv_id ++) {  
@@ -77,7 +74,8 @@ try{
 	cs.registerOutParameter(5, java.sql.Types.INTEGER);	 //achv_result_cd
 	cs.execute();
 	payment_result = cs.getInt(5);
-	
+
+
 // 출석업데이트 
 	int attend_result =0;
 	cs = Conn.prepareCall("{call abn_MgmtAttend(?,?,?,?,?,?)}"); 
@@ -90,16 +88,13 @@ try{
 	cs.execute();
 	attend_result = cs.getInt(6);
 
-
 	//사용자 정보 조회 부분 
-
 	Conn = DriverManager.getConnection(DB_url_replica, DB_user, DB_pwd);
 	sql.setLength(0);
 	sql.append(" Call abn_getUserInfo ( " + user_account + ") \n");
-	//System.out.println (sql.toString());
 	pstmt = Conn.prepareStatement(sql.toString());
-	
 	rs = pstmt.executeQuery();
+	
 	list = new ArrayList<Map<String, Object>>();
 	
 	while(rs.next()){
@@ -143,15 +138,16 @@ try{
 	
 		tot_cnt++;
 	}
-		 
 }catch(Exception e){
-	System.out.println("SQL 연결 오류 : " + e);
+	System.out.println("SQL Exception : " + e);
 	e.printStackTrace();
 }finally{
 	if(Conn != null) Conn.close();
 	if(pstmt != null) pstmt.close();
 	if(rs != null) rs.close();
-}	%> 
+}	
+%> 
+
 <%@ include file="./moe_header.jsp"%>
 <%=P_type%>|
 <%for(int i=0;i<list.size();i++){%>
