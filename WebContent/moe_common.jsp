@@ -33,5 +33,5 @@
 <%@ page errorPage="./ma_error.jsp" %>
 <%@ include file="./DBConnection.jsp"%>
 <%
-String user_account = request.getParameter("user_account"); //어플에서 보내는 사용자 계정(Key)
+String user_account = request.getParameter("user_account"); 
 %>

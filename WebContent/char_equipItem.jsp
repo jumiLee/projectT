@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./common.jsp"%>
 <%
+//Packet
+//user_account(int)|Res(0:성공,-1:문제발생)|ResMsg
+
 String P_type ="T005";
 String mon_id 		= request.getParameter("char_id"); 	//기초 몬스터 아이디
 String user_mon_sn 	= "1"; 	//기초 몬스터 고유번호
@@ -478,4 +481,4 @@ try{
 	if(pstmt_sok != null) pstmt_sok.close();  
 	
 }	%>  
-<%=P_type %>|<%=result_cd %>|<%=result_msg %>|
+<%=P_type %>|<%=user_account %>|<%=result_cd %>|<%=result_msg %>|

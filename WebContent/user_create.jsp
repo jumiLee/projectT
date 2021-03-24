@@ -1,13 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="./common.jsp"%>
+<%@ include file="./moe_common.jsp"%>
 <%
 String P_type ="T000";
 int exist_user_flag =0;	//기존유저 Flag (1:새로운 유저, 2:기존유저)
 int exist_char_flag =0; //기존 캐릭터 Flag ( 1캐릭터있음, 2:캐릭터없음)
 int mon_cnt = 0;
-//request.setCharacterEncoding("UTF-8");
-
-//String tmp_header = "0|0|0|0|0|0|0|0|0|0|0|0|0|3|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0";
 
 String user_level 	= "1";	//사용자레벨
 String user_email 	= "0";			//이메일 (임시)
@@ -68,8 +65,6 @@ System.out.println("계정생성결과(" + ch_id + "): " + result_cd);
 	  	if(rs.next()){
 	  		mon_cnt = rs.getInt("mon_cnt");
 	  	}	
-
-	  //System.out.println(sql.toString());
 	  	
 	  	if (mon_cnt ==0 ) {
 	  		exist_char_flag = 2;  

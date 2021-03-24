@@ -2,6 +2,9 @@
 <%@ include file="./common.jsp"%>
 
 <%
+//Packet
+//user_account(int)|Res(0:성공,-1:문제발생)
+
 String P_type ="T004";
 int job_type = 1;
 String char_id = request.getParameter("char_id");

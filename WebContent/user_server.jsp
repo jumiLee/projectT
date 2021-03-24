@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./common.jsp"%>
 <%
-String P_type ="T002";
+//Packet
+//user_account(int)	serverNo(int)	Res(0:성공,-1:문제발생)
 
+String P_type ="T002";
 String svr_no = request.getParameter("serverNo");
 
 CallableStatement cs = null;
@@ -29,4 +31,4 @@ try{
 	if(rs != null) rs.close();
 }	
 %>
-<%=P_type%>|<%=svr_no%>|<%=result_cd%>|
+<%=P_type%>|<%=user_account %>|<%=svr_no%>|<%=result_cd%>|

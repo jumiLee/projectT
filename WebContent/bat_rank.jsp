@@ -2,6 +2,9 @@
 <%@ include file="./moe_common.jsp"%>	
 
 <%
+//Packet
+//user_account(int)|(int)my_rank|(int)my_point|(int)my_kill_cnt|(int)my_die_cnt|(int)my_win_cnt|(int)my_lose_cnt|
+//RankinglistCnt(int)|(int)rank|(str)RankingNickName1|(int)point|(int)kill_cnt|(int)die_cnt|(int)win_cnt|(int)lose_cnt
 
 int unit_cd = 0;
 String P_type = "T014";

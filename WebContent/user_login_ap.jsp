@@ -43,6 +43,10 @@ try{
 	    server_list += rs.getInt(1) +"|" + rs.getString(2) +"|";
 		tot_cnt++;
 	}
+	
+//Packet
+//user_account(int)	result_cd(int)	NickName(str)	ClientVer(int)	CurrentServNo(int)	serverlist(int)	ServNo(int)1	ServName(str)1	ServNo(int)2	ServName(str)2	ServNo(int)3	ServName(str)3
+
 %>
 <%=P_type%>|<%=user_account %>|<%=result %>|<%=StringUtils.defaultString(user_nickname,"0") %>|<%=clientVer%>|<%=curr_svr_no %>|<%= tot_cnt%>|<%=server_list %>
 <%	

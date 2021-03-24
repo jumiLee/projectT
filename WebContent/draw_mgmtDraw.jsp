@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./common.jsp"%>
 <%
+//Packet
+//result(0:성공,-1:문제발생)|rwd_type_cd(int)|rwd_id(int)|rwd_nm(str)|rare_degree(int)|rwd_img_no(int)
+
 String P_type 	="T016";
 String draw_id 	= request.getParameter("draw_id");	//draw_id
 int draw_type_cd = -1;
