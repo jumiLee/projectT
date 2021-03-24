@@ -1,17 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./moe_common.jsp"%>
-<%@ include file="./moe_header.jsp"%>
 <%
-
+//Packet
+//user_account(int)	ClientVer(int)	GaChaKind(int)-상점종류(1:Mech,2:Arm)	ShopList(int)	(int)ShopVal1	(str)ShopName1	(str)ShopAbout1	(int)ShopVal2	(str)ShopName2	(str)ShopAbout2	(int)ShopVal3	(str)ShopName3	(str)ShopAbout3
+            
 int unit_cd = 0;
-String P_type = "";
+String P_type = "T015";
 String draw_type_cd = request.getParameter("draw_type_cd");
-
-if (draw_type_cd.equals("4")){
-	P_type = "T585";
-}else if (draw_type_cd.equals("5")){
-	P_type = "T586";
-}
 
 String result_packet = "" ; //Result Packet
 int tot_cnt 	= 0;
@@ -31,12 +26,9 @@ try{
 	 
 	Conn = DriverManager.getConnection(DB_url, DB_user, DB_pwd);
 	
-	sql.append(" Call abn_getDrawList  (2," + draw_type_cd + " )\n") ;
+	sql.append(" Call pt_getDrawList  (2," + draw_type_cd + " )\n") ;
 	
 	pstmt = Conn.prepareStatement(sql.toString());
-	
-	//System.out.println (P_type + ": " + sql.toString());
-	
 	rs = pstmt.executeQuery();
 	list = new ArrayList<Map<String, Object>>();
 	
@@ -57,6 +49,7 @@ try{
 		list.add(map);
 		tot_cnt++;
 	}
+	/*
 
 	if (draw_type_cd.equals("5")) {	//코스튬일 경우 아이템상세 정보 추가(15-04-24)
 		sql.setLength(0);
@@ -182,7 +175,7 @@ try{
 			}//end for
 		}//end if		
 	}//end for
-	
+	*/
 }catch(Exception e){
 	System.out.println("SQL 연결 오류 : " + e);
 	e.printStackTrace();
@@ -193,4 +186,6 @@ try{
 	if(pstmt_c != null) pstmt_c.close();
 	if(rs_c != null) rs_c.close();	
 }	%>
-<%=P_type%>|<%=result_packet%>
+<%=P_type %>|<%=tot_cnt %>|<%for(int i=0;i<list.size();i++){%>
+<%=list.get(i).get("draw_id")%>|<%=list.get(i).get("draw_nm")%>|<%=list.get(i).get("draw_desc")%>|
+<%}%>

@@ -26,12 +26,12 @@
 <%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
 <%@page import="org.json.simple.*"%>
+
+<%@page import="org.apache.commons.lang.StringUtils"%>
+
 <%@page import="javax.net.ssl.HttpsURLConnection"%>
 <%@ page import="java.net.URLEncoder"%>
-
-
-<%@ page errorPage="./ma_error.jsp" %>
 <%@ include file="./DBConnection.jsp"%>
 <%
-String user_account = request.getParameter("user_account"); 
+int clientVer = 0;
 %>
