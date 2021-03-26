@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="./common_import.jsp"%>
+<%@ include file="./moe_common.jsp"%>
 <%
 String P_type ="T001";
 
@@ -11,7 +11,7 @@ tot_cnt = 0;
 String ID = request.getParameter("id");
 String PWD = request.getParameter("pwd");
 int result = 0;
-int user_account = 0;
+//int user_account = 0;
 int curr_svr_no = 0;
 String user_nickname = "0";
 String server_list="";
@@ -27,7 +27,7 @@ try{
 	rs = pstmt.executeQuery();  
 	if(rs.next()){		
 		result 		 	= rs.getInt("result");
-		user_account 	= rs.getInt("user_account");
+		user_account 	= rs.getString("user_account");
 		curr_svr_no 	= rs.getInt("server_no");
 		user_nickname 	= rs.getString("user_nickname");
 	}

@@ -19,7 +19,6 @@ String ch_id	= request.getParameter("ch_id");	//채널아이디(AccountNo)
 String ch_nm 	= request.getParameter("ch_nm");	//채널아이디(ID)
 if(user_level==null ){
 	user_level = "1";
-	//user_level = "2"; //Guest
 } 
 
 CallableStatement cs = null;

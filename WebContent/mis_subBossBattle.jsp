@@ -55,7 +55,7 @@ try{
 	cs.setString(6,mis_sub_id);
 	cs.registerOutParameter(7, java.sql.Types.INTEGER);	 //result (bat_result,level_flag,stage_clear_flag)
 	cs.execute();
-	boss_result = cs.getInt(7);
+	boss_result = cs.getString(7);
 	
   // 획득 경험치,골드 조회	(승리한 경우만)
 	sql.setLength(0);

@@ -5,9 +5,8 @@ int h_user_coin  =0; int h_user_point=0; int h_user_img =0; int h_cur_wp =0; int
 String h_user_nickname = "0";
 int max_party_h = 3;
 String deck_packet = "";
-	
-//Deck Pos에 따른 파티원 배치
-    String Deck[] =new String[max_party_h];
+
+String Deck[] =new String[max_party_h];
     for(int des = 0;des<Deck.length;des++)
     {
     	Deck[des]="-1|-1|-1|-1|-1|-1|-1|";

@@ -19,6 +19,7 @@
 <%@ include file="./DBConnection.jsp"%> 
 <%
 CallableStatement cs = null;
+int achv_result = 0;
 String P_type ="T111";
 
 String m_no = request.getParameter("m_no");
@@ -47,8 +48,8 @@ try{
 			
 				cs = Conn.prepareCall("{call abn_mgmtUserAchv_out(?,?,?,?,?,?,?)}"); // 7일연속접속
 				cs.setInt(1,1);
-				cs.setString(2,user_account);
-				cs.setString(3,user_account);
+				cs.setInt(2,user_account);
+				cs.setInt(3,user_account);
 				cs.setInt(4,2);
 				cs.setInt(5,1);
 				cs.setInt(6,1);
@@ -58,8 +59,8 @@ try{
 				
 				cs = Conn.prepareCall("{call abn_mgmtUserAchv_out(?,?,?,?,?,?,?)}"); //하루1회접속
 				cs.setInt(1,1);
-				cs.setString(2,user_account);
-				cs.setString(3,user_account);
+				cs.setInt(2,user_account);
+				cs.setInt(3,user_account);
 				cs.setInt(4,3);
 				cs.setInt(5,1);
 				cs.setInt(6,1);
@@ -71,8 +72,8 @@ try{
 				for (achv_id =1; achv_id < 4 ; achv_id ++) {  
 					cs = Conn.prepareCall("{call abn_mgmtUserAchv_out(?,?,?,?,?,?,?)}");  //이벤트업적(매일12:00~2:00사이접속/매일18:00~19:00사이접속/설 접속 이벤트)
 					cs.setInt(1,1);
-					cs.setString(2,user_account);
-					cs.setString(3,user_account);
+					cs.setInt(2,user_account);
+					cs.setInt(3,user_account);
 					cs.setInt(4,1);
 					cs.setInt(5,achv_id);
 					cs.setInt(6,1);
@@ -85,7 +86,7 @@ try{
 				int payment_result =0;
 				cs = Conn.prepareCall("{call abn_mgmtUserEvtPayment(?,?,?,?,?)}"); 
 				cs.setInt(1,2);
-				cs.setString(2,user_account);
+				cs.setInt(2,user_account);
 				cs.setInt(3,1);
 				cs.setInt(4,2);
 				cs.registerOutParameter(5, java.sql.Types.INTEGER);	 //achv_result_cd
@@ -96,7 +97,7 @@ try{
 				int attend_result =0;
 				cs = Conn.prepareCall("{call abn_MgmtAttend(?,?,?,?,?,?)}"); 
 				cs.setInt(1,1);
-				cs.setString(2,user_account);
+				cs.setInt(2,user_account);
 				cs.setInt(3,1);
 				cs.setString(4,null);
 				cs.setString(5,null);
