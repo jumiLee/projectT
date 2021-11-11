@@ -75,10 +75,6 @@ try{
 		tot_cnt ++;
 	}
 	
-	if (list == null){
-		//System.out.println ("T584 : ArrayList is null");		
-	}
-	
 	for(int i=0;i<list.size();i++){
 		
 		/*

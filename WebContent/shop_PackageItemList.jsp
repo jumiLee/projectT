@@ -91,12 +91,7 @@ try{
 		pack_list.add(pack_map);	
 	}
 	*/
-	if (list == null){
-		//System.out.println ("T587 : ArrayList is null");		
-	}
-	if (pack_list == null){
-		//System.out.println ("pack_list : ArrayList is null");		
-	}
+	
 	/*
 	total_cnt|item_id|item_nm|item_category|item_type|item_price|unit_cd|item_desc|item_value|item_cnt|item_img_no|
 	pack_cnt|pack_type|pack_id|pack_sub_id|pack_nm|pack_img_no|pack_desc|

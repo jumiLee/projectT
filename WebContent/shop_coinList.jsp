@@ -41,7 +41,6 @@ System.out.println(sql);
 	}
 	
 	if (list == null){
-		//System.out.println ("T581 : ArrayList is null");
 		result_packet="0";
 	}else{
 		for(int i=0;i<list.size();i++){

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="./common.jsp"%>
+<%@ include file="./moe_common.jsp"%>
 <%
 //Packet
 //user_account(int)UserPoint(int)	로봇파츠(int)	(int)무기1파츠	(int)무기2파츠	(int)무기3파츠	(int)무기4파츠	(int)무기5파츠	소유로봇갯수(int)	(int)소유로봇1	(int)소유로봇2	(int)소유로봇3	소유무기갯수(int)	(int)소유무기1	(int)소유무기2	(int)소유무기3

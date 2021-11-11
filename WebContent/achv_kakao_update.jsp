@@ -36,9 +36,9 @@ try{
 		cs.setInt(1,1);
 		cs.setString(2,user_account);
 		cs.setString(3,target_kakao_id);
-		cs.setString(4,achv_type);
-		cs.setString(5,achv_id);
-		cs.setString(6,achv_cnt);
+		cs.setInt(4,achv_type);
+		cs.setInt(5,achv_id);
+		cs.setInt(6,achv_cnt);
 		cs.registerOutParameter(7, java.sql.Types.INTEGER);	 
 		cs.execute();
 		result = cs.getInt(7);

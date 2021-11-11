@@ -29,9 +29,10 @@
 <%@page import="javax.net.ssl.HttpsURLConnection"%>
 <%@ page import="java.net.URLEncoder"%>
 
-
+<%@page import="org.apache.commons.lang.StringUtils"%>
 <%@ page errorPage="./ma_error.jsp" %>
 <%@ include file="./DBConnection.jsp"%>
 <%
 String user_account = request.getParameter("user_account"); 
+int clientVer = 0;
 %>
