@@ -6,15 +6,18 @@
 <%
 try{
 	//String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"; //MSSQL Driver
-	String Driver = "com.mysql.jdbc.Driver";  //MySQL Driver
+	String Driver = "com.mysql.cj.jdbc.Driver";  //MySQL Driver
 	Class.forName(Driver); 
 	//System.out.println("Ok Driver");
 }catch(Exception e){
 	System.out.println("JDBC 드라이버 연결 오류 : " + e);
 	e.printStackTrace();
 }  
-String DB_url = "jdbc:mysql://edeninstance1.cqka8xbywsmf.ap-northeast-2.rds.amazonaws.com:33062/nb";	//Amazon Global Live (MYSQL / 노블리스)	
-String DB_url_replica = "jdbc:mysql://edeninstance1.cqka8xbywsmf.ap-northeast-2.rds.amazonaws.com:33062/nb";	//Amazon Live Replica (MYSQL / 노블리스)
+//String DB_url = "jdbc:mysql://edeninstance1.cqka8xbywsmf.ap-northeast-2.rds.amazonaws.com:33062/nb";	//Amazon Global Live (MYSQL / 노블리스)	
+//String DB_url_replica = "jdbc:mysql://edeninstance1.cqka8xbywsmf.ap-northeast-2.rds.amazonaws.com:33062/nb";	//Amazon Live Replica (MYSQL / 노블리스)
+
+String DB_url = "jdbc:mysql://localhost:3306/nb?serverTimezone=Asia/Seoul";	//Amazon Global Live (MYSQL / 노블리스)	
+String DB_url_replica = "jdbc:mysql://localhost:3306/nb?serverTimezone=Asia/Seoul";	//Amazon Live Replica (MYSQL / 노블리스)
 
 
 //String DB_url = "jdbc:mysql://192.168.1.24:3306/NB";	//LOCAL QA (MYSQL / 노블리스)
